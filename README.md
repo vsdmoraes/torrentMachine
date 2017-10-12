@@ -4,7 +4,6 @@
 
 This project has as objective create a torrent and media center server, donwloading and hosting all medias in a local network.
 
----
 ## Technologies
 
 + [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/) as operational system.
@@ -12,7 +11,6 @@ This project has as objective create a torrent and media center server, donwload
 + [Plex](https://www.plex.tv) as media center server.
 + [Samba](https://www.samba.org) as network file system. *(Optional)*
 
----
 ## Installation
 
 
@@ -26,7 +24,7 @@ It's possible install all dependecies with "install.sh"
 
 Also, you can install step by step, as explained below.
 
----
+
 ### Activating SSH on Startup
 
 > Note: I'm using SSH at this project, because it's an easy way to work with Raspbian Lite, since this version there isn't GUI. So, if you don't want use it, feel free to skip this step.
@@ -126,11 +124,12 @@ sudo apt-get install -t jessie plexmediaserver
 <a name="settings">Settings</a>
 -------------------------------
 
+<a name="references">References</a>
+
 Reference: https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959
 
 Reference: https://thepi.io/how-to-set-up-a-raspberry-pi-plex-server/
 
 Reference: http://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update
 ---
-<a name="references">References</a>
 ----------
