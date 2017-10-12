@@ -10,21 +10,23 @@ This project has as objective create a torrent and media center server, donwload
 Technologies
 ------------
 
-+ Raspbian (Basic)
-+ SSH
-+ Transmission-daemon
-+ Plex
++ [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/) as operational system.
++ [Transmission-daemon](https://transmissionbt.com) as torrent web client.
++ [Plex](https://www.plex.tv) as media center server.
++ [Samba](https://www.samba.org) as network file system. *(Optional)*
 
 Installation
 ------------
 
 It's possible install all dependecies with "install.sh"
 
-> sudo sh install.sh
+```
+ sudo sh install.sh
+```
 
 (If you use this method, when finish, please go to section ...)
 
-Or you can install step by step, as following explained
+Or you can install step by step, as following explained.
 
 
  
@@ -38,6 +40,8 @@ Active SSH Service:
 3) save & exit
 
 Reference: https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959
+
+(**Source**: [Raspberry Pi Forums](#References))
 
 --
 
@@ -98,3 +102,6 @@ sudo apt-get install -t jessie plexmediaserver
 
 
 Reference: https://thepi.io/how-to-set-up-a-raspberry-pi-plex-server/
+
+References
+----------
