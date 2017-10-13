@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project has as objective create a torrent and media center server, donwloading and hosting all medias in a local network.
+This project has the objective to create a torrent and media center server, donwloading and hosting all medias in a local network.
 
 ## Technologies
 
@@ -11,27 +11,18 @@ This project has as objective create a torrent and media center server, donwload
 + [Plex](https://www.plex.tv) as media center server.
 + [Samba](https://www.samba.org) as network file system. *(Optional)*
 
-## Installation
+## Before to install
 
-
-It's possible install all dependecies with "install.sh"
-
-```
- sudo sh install.sh
-```
-
->Note: If you use this method, when finish, please go to [Settings](#settings)
-
-Also, you can install step by step, as explained below.
+> This step is optional, you can skip to the installation, but I highly recommend do the following settings. 
 
 
 ### Activating SSH on Startup
 
-> Note: I'm using SSH at this project, because it's an easy way to work with Raspbian Lite, since this version there isn't GUI. So, if you don't want use it, feel free to skip this step.
+> Note: I'm using SSH in this project, because it's an easy way to work with Raspbian Lite, since this version doesn't exist GUI. So, if you don't want use it, feel free to skip this step.
 
 You've to edit /etc/rc.local file 
 ```
-sudo nano /etc/rc.local
+$ sudo nano /etc/rc.local
 ```
 
 And just above last command (exit 0) add a line to start ssh
@@ -42,20 +33,20 @@ And just above last command (exit 0) add a line to start ssh
 
 Now save & exit.
 
-*(**Disclaimer**: I now that isn't the better way to do it, but is the easiest.)*
+*(**Disclaimer**: I know that isn't the best way to do it, but it's the easiest.)*
 
-(**Source**: [Raspberry Pi Forums](#https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959))
+(**Source**: [Raspberry Pi Forums](https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959)
 
 
 ---
 ### Setting a Static IP
 
-Now let's set a Static IP, to be access the servers easier. 
+Now let's set a Static IP, to be easier to access the servers. 
 
 You've to edit the /etc/dhcpcd.conf file.
 
 ``` 
-sudo nano /etc/dhcpcd.conf
+$ sudo nano /etc/dhcpcd.conf
 ```
 And add the following parameters:
 ```
@@ -87,20 +78,63 @@ Now save and exit.
 ---
 ### Setting hostname and host
 
-## Not finish yet.
+First, edit the /etc/hostname file
 
-Set hostname and host:
+```
+$ sudo nano /etc/hostname
+```
 
-sudo nano /etc/hosts
+Now delete the current and type yours hostname
 
-sudo nano /etc/hostname
+Example:
+
+```
+vsdmoraes
+```
+
+Also, modify you hosts to create an "internal DNS". 
+
+```
+$ sudo nano /etc/hosts
+```
+
+and type your Static IP and the host link
+
+Example:
+```
+192.168.1.10    vsdmoraes.com
+```
+
+(**Source**: [How to Forge](https://www.howtoforge.com/linux-basics-set-a-static-ip-on-ubuntu))
 
 
-Reference: https://www.howtoforge.com/linux-basics-set-a-static-ip-on-ubuntu
+---
 
---
+### You are almost there...
 
-Install transmission-daemon:
+Now you are ready to start :)
+
+Please, reboot you system and verify if you network and everything are ok.
+```
+$ sudo reboot
+```
+---
+## Installation
+
+It's possible to install all dependecies with "install.sh"
+
+```
+$ sudo sh install.sh
+```
+
+> Note: If you use this method, when finish, please go to [Settings](#settings)
+ 
+Also, you can install step by step, as explained below.
+
+---
+---
+## CONTINUE HERE ##
+## Install transmission-daemon:
 
 sudo apt-get install transmission-cli transmission-common transmission-daemon
 
@@ -120,16 +154,9 @@ echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.
 sudo apt-get update
 sudo apt-get install -t jessie plexmediaserver
 
----
-<a name="settings">Settings</a>
--------------------------------
+Install Plex: https://thepi.io/how-to-set-up-a-raspberry-pi-plex-server/
 
-<a name="references">References</a>
+Install Samba: https://raspberrypihq.com/how-to-share-a-folder-with-a-windows-computer-from-a-raspberry-pi/
 
-Reference: https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959
 
-Reference: https://thepi.io/how-to-set-up-a-raspberry-pi-plex-server/
-
-Reference: http://www.modmypi.com/blog/how-to-give-your-raspberry-pi-a-static-ip-address-update
----
-----------
+## <a name="settings">Settings</a>
