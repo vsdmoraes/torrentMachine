@@ -35,7 +35,7 @@ Now save & exit.
 
 *(**Disclaimer**: I know that isn't the best way to do it, but it's the easiest.)*
 
-(**Source**: [Raspberry Pi Forums](https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959)
+(**Source**: [Raspberry Pi Forums](https://www.raspberrypi.org/forums/viewtopic.php?p=612959&sid=abb24f703382a4ac228063057d7ae29a#p612959))
 
 
 ---
@@ -134,7 +134,7 @@ Also, you can install step by step, as explained below.
 ---
 ---
 ## CONTINUE HERE ##
-## Install transmission-daemon:
+### Install transmission-daemon:
 
 sudo apt-get install transmission-cli transmission-common transmission-daemon
 
@@ -156,7 +156,20 @@ sudo apt-get install -t jessie plexmediaserver
 
 Install Plex: https://thepi.io/how-to-set-up-a-raspberry-pi-plex-server/
 
-Install Samba: https://raspberrypihq.com/how-to-share-a-folder-with-a-windows-computer-from-a-raspberry-pi/
+--
+
+### Install Samba
+
+> Note: This step is optional. Just install Samba if you want to share the folders in the internal network.
+
+To install Samba, please, type this commands in your terminal
+```
+$ sudo apt-get install samba
+```
+
+
+
+Install Samba: https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated%2C%20Simple%20and%20Brief%20Way%21
 
 
 ## <a name="settings">Settings</a>
