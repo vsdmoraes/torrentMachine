@@ -24,9 +24,18 @@ echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.
 sudo apt-get update >> install.log
 sudo apt-get install -t jessie plexmediaserver >> install.log
 
+echo " Samba"
+sudo apt-get install samba
+mkdir ~/Downloads
 
+echo "Install: Done"
 
+echo "Setting up..."
+sudo chmod 777 settings.sh
+sudo sh settings.sh
 
 
 rm install.log
 echo "Done."
+echo "Rebooting in 3...2...1..."
+sudo reboot

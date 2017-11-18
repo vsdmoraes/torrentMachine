@@ -156,6 +156,12 @@ sudo apt-get install -t jessie plexmediaserver
 
 Install Plex: https://thepi.io/how-to-set-up-a-raspberry-pi-plex-server/
 
+
+--
+
+install apache php mysql 
+http://www.linuxandubuntu.com/home/how-to-setup-a-web-server-and-host-website-on-your-own-linux-computer
+
 --
 
 ### Install Samba
