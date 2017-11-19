@@ -27,7 +27,7 @@ sudo apt-get install -t jessie plexmediaserver -y >> install.log
 echo " Samba"
 sudo apt-get install samba -y >> install.log
 mkdir ~/Downloads
-sudo chmod 777 Downloads/
+sudo chmod 777 ~/Downloads/
 
 echo "Install: Done"
 
