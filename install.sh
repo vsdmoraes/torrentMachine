@@ -18,15 +18,16 @@ echo "  Transmission"
 sudo apt-get install transmission-cli transmission-common transmission-daemon -y >> install.log
 
 echo "  Plex"
-sudo apt-get install apt-transport-https >> install.log
+sudo apt-get install apt-transport-https -y >> install.log
 wget -O - https://dev2day.de/pms/dev2day-pms.gpg.key | sudo apt-key add - >> install.log
 echo "deb https://dev2day.de/pms/ jessie main" | sudo tee /etc/apt/sources.list.d/pms.list >> install.log
 sudo apt-get update >> install.log
-sudo apt-get install -t jessie plexmediaserver >> install.log
+sudo apt-get install -t jessie plexmediaserver -y >> install.log
 
 echo " Samba"
-sudo apt-get install samba
+sudo apt-get install samba -y >> install.log
 mkdir ~/Downloads
+sudo chmod 777 Downloads/
 
 echo "Install: Done"
 
